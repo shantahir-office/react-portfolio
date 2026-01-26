@@ -1,9 +1,9 @@
 function Shan() {
   return (
-    <div>
-      <h1>Shan ddd</h1>
+    <div className="bg-red-500 flex items-center justify-center min-h-screen">
+      <h1 className="text-white">Shan ddd</h1>
     </div>
-  )
+  );
 }
 
 export default Shan;
