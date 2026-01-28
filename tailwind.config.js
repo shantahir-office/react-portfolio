@@ -1,11 +1,16 @@
-export default {
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}",
-    "./node_modules/tw-elements/dist/js/**/*.js"
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js", // tw-elements ko scan karne ke liye
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#00b67a",    // tumhara green
+        secondary: "#33a1e0",
+      },
+    },
   },
   plugins: [],
-}
+};

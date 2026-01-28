@@ -1,19 +1,20 @@
-
-import { useEffect } from "react"
-import { Modal, Ripple, initTWE } from "tw-elements"
+import { useEffect } from "react";
+import { Modal, initTWE } from "tw-elements";
+import Header from "./components/Header.jsx";
 function App() {
-    useEffect(() => {
-    initTWE({ Modal, Ripple })
-  }, [])
+  useEffect(() => {
+    initTWE({ Modal});
+  }, []);
   return (
     <>
+    <Header />
       {/* BUTTON */}
       <button
         type="button"
         className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white"
         data-twe-toggle="modal"
         data-twe-target="#exampleModal"
-        data-twe-ripple-init
+        
         data-twe-ripple-color="light"
       >
         Launch demo modal
@@ -33,7 +34,6 @@ function App() {
           className="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]"
         >
           <div className="pointer-events-auto relative flex w-full flex-col rounded-md bg-white shadow">
-            
             {/* HEADER */}
             <div className="flex items-center justify-between border-b p-4">
               <h5 className="text-xl font-medium" id="exampleModalLabel">
@@ -59,12 +59,12 @@ function App() {
                 Save
               </button>
             </div>
-
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+
+export default App;
